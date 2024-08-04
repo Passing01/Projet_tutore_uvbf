@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Saisie de numéro de téléphone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <form id="telephoneForm" onsubmit="validatePhoneNumber(event)">
+            <p>Entrez votre numéro de téléphone :</p>
+            <input id="telephoneInput" type="text" name="telephone" />
+            <input type="submit" value="Valider" />
+        </form>
+        <div id="errorMessage" style="display: none; color: red;"></div>
+    </div>
+
+    <script>
+        function validatePhoneNumber(event) {
+            event.preventDefault();
+            const telephoneInput = document.getElementById("telephoneInput");
+            const phoneNumber = telephoneInput.value;
+
+            // Vérification : uniquement des chiffres
+            if (/^\d+$/.test(phoneNumber)) {
+                // Numéro valide
+                console.log("Numéro de téléphone valide :", phoneNumber);
+            } else {
+                // Afficher un message d'erreur
+                const errorMessage = document.getElementById("errorMessage");
+                errorMessage.textContent = "Veuillez entrer un numéro de téléphone valide (chiffres uniquement).";
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

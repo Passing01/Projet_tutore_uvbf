@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="nous_contacter.css">
+    <script>
+        function validateForm() {
+            var emailInput = document.forms["myForm"]["email"].value;
+            var emailPattern = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+
+            if (emailInput.match(emailPattern)) {
+                // L'email est valide, vous pouvez envoyer le formulaire ici
+                alert("Formulaire envoyé !");
+                // Remplacez l'adresse email ci-dessous par celle souhaitée
+                window.location.href = "mailto:ouerahim456@gmail.com";
+            } else {
+                alert("Veuillez saisir une adresse email valide.");
+            }
+        }
+
+        // Fonction pour n'accepter que les chiffres dans le champ de téléphone
+        function validatePhoneNumberInput(event) {
+            var charCode = event.which || event.keyCode;
+            if (charCode < 48 || charCode > 57) {
+                // Caractère non numérique détecté, afficher un message d'erreur
+                alert("Veuillez saisir uniquement des chiffres pour le numéro de téléphone.");
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="contact">
+    <form method="post">
+        <h1>CONTACTER NOUS</h1>
+        <div class="f1">
+            <label for="nom">Entrer votre nom</label>
+            <input type="text" name="nom" required><br>
+        </div>
+
+        <div class="f1">
+            <label for="prenom">Saisir votre prénom</label>
+            <input type="text" name="prenom" required><br>
+        </div>
+
+        <div class="f1">
+            <label for="telephone">Saisir numéro de téléphone</label>
+            <input type="tel" name="telephone" onkeypress="validatePhoneNumberInput(event)" required><br>
+        </div>
+
+        <div class="f1">
+            <label for="email">Votre adresse électronique</label>
+            <input type="email" name="email"><br>
+        </div>
+        <!-- Bouton de soumission du formulaire -->
+        <input type="submit" value="Envoyer" onclick="validateForm()">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+Bien sûr ! Voici une explication détaillée ligne par ligne du code CSS que vous avez partagé :
+
+1. **`body`**:
+    - Cette règle s'applique à l'élément `<body>` de votre page HTML.
+    - **`font-family: Verdana, Geneva, Tahoma, sans-serif;`** : Elle définit la police de caractères utilisée pour le texte dans le corps de la page. Si Verdana n'est pas disponible, le navigateur utilisera Geneva, puis Tahoma, et enfin une police sans empattement (sans-serif) comme alternative.
+    - **`background-color: rgb(30, 30, 70);`** : Cela détermine la couleur d'arrière-plan du corps de la page. Dans ce cas, la couleur est un bleu foncé (code RGB : 30, 30, 70).
+    - **`background-image: url("images/T2.webp");`** : Cette propriété définit l'image d'arrière-plan du corps de la page. L'image est spécifiée à partir du fichier "T2.webp" situé dans le dossier "images".
+
+2. **`.contact`** :
+    - Cette règle s'applique à un élément avec la classe "contact".
+    - **`border: 1px solid black;`** : Elle ajoute une bordure d'un pixel de couleur noire autour de l'élément.
+    - **`width: 400px;`** : Définit la largeur de l'élément à 400 pixels.
+    - **`height: 560px;`** : Définit la hauteur de l'élément à 560 pixels.
+    - **`margin: 0px auto;`** : Centre l'élément horizontalement en utilisant la marge automatique.
+    - **`color: white;`** : Définit la couleur du texte à blanc.
+    - **`border-radius: 20px;`** : Arrondit les coins de l'élément avec un rayon de 20 pixels.
+    - **`box-shadow: 0px 0px 20px rgba(0, 0, 0,0.75);`** : Ajoute une ombre portée à l'élément.
+    - **`background-size: cover;`** : Ajuste la taille de l'image d'arrière-plan pour couvrir tout l'élément.
+    - **`background-position: center;`** : Centre l'image d'arrière-plan horizontalement et verticalement.
+    - **`overflow: hidden;`** : Masque tout contenu qui dépasse de l'élément.
+
+3. **`form`** :
+    - Cette règle s'applique à l'élément `<form>` dans la classe "contact".
+    - **`display: block;`** : Définit l'affichage de l'élément comme un bloc.
+    - **`box-sizing: border-box;`** : Inclut les bordures et le rembourrage dans la largeur et la hauteur totales de l'élément.
+    - **`padding: 40px;`** : Ajoute un rembourrage de 40 pixels à l'intérieur de l'élément.
+    - **`backdrop-filter: brightness(40%);`** : Applique un filtre de luminosité de 40 % à l'arrière-plan.
+    - **`flex-direction: column;`** : Définit la direction des éléments enfants comme une colonne.
+    - **`gap: 5px;`** : Ajoute un espace de 5 pixels entre les éléments enfants.
+
+4. **`h1`** :
+    - Cette règle s'applique aux éléments `<h1>` dans la classe "contact".
+    - **`font-weight: normal;`** : Définit l'épaisseur normale de la police.
+    - **`font-size: 24px;`** : Définit la taille de la police à 24 pixels.
+    - **`text-shadow: 0px 0px 2px rgba(0, 0, 0,0.5);`** : Ajoute une ombre au texte pour le mettre en évidence.
+    - **`margin-bottom: 60px;`** : Ajoute une marge inférieure de 60 pixels.
+
+5. **`label`**, **`input`**, et **`button`** :
+    - Ces règles s'appliquent aux éléments `<label>`, `<input>` et `<button>` respectivement.
+    - Elles définissent
